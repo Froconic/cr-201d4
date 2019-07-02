@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Class Lab 1</h1>
+<p style="color: #5B0206; font-size: 25px;">What is your name?</p>
+<p style="color: #886C1A; font-size: 25px;">What is your #1 passion?</p>
+<p style="color: #7099A3; font-size: 25px;">What is your favorite food?</p>
+<p style="color: #6E5194; font-size: 25px;">Do you know another language?</p>
+
+<script>
+var name,passion,food,language;
+name = prompt('What is your name?');
+temp = prompt("Do you know another language?");
+language = temp.toUpperCase();
+passion = prompt("What is your #1 passion?");
+food = prompt("What is your absolute favorite food");
+
+if(name !== isNaN(name)){
+    console.log("greets user by name")
+alert("Hello " + name + "!");
+}  else{
+    console.log("Prompts user for their name again")
+
+    alert("Please no numbers only letters.")
+  name = prompt("Reenter your name");
+}
+
+if(passion !== isNaN(passion)){
+    console.log("Asks for the user's passion and tells them they are amazing")
+
+    alert(passion + " that's amazing " + name + "!");
+} else{
+    console.log("Prompts the user to reenter their response")
+
+    alert("Please no numbers only letters.");
+    passion = prompt("Reenter your passion in life");
+}
+
+if(food !== isNaN(food)){
+    console.log("Asks is the user eats their favorite food while doing their passion")
+
+    alert("MMMMM " + food + " that sounds delicious " + name + "! Do you eat it while you " + passion + "?");
+} else{
+    console.log("Prompts the user to reenter their response")
+
+    alert("Enter a real food with only letters please");
+    food = prompt("Reenter your favorite food please");
+}
+
+if(language !== isNaN(language)){
+    console.log("If the user knows a second language tells them they are talented and asks if they speak it while eating and doing their passion")
+
+    language = language.toLowerCase();
+    alert("Wow " + language + ", you are pretty talented " + name + ". Do you speak " + language + " while you do " + passion + " and eat " + food + "?");
+}
+if(language !== 'NO'){
+    console.log("If they only know English tells them maybe thery should pick up another language while doing their passion and eating")
+    alert("Only English? Maybe you should learn another language while you " + passion + " and eat " + food + " " + name + ".")
+} else{
+    console.log("Prompts the user to reenter their response")
+
+    alert("Not a real language!");
+    temp = prompt("Please reenter a language");
+    language = temp.toUpperCase();
+}
+
+</script>
+</body>
+</html>
